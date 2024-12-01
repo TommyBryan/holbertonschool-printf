@@ -8,8 +8,8 @@
  */
 int print_c(va_list args)
 {
-    char c = va_arg(args, int); // Get the character
-    return (write(1, &c, 1));
+	char c = va_arg(args, int); /* Get the character */
+	return (write(1, &c, 1));
 }
 
 /**
@@ -20,16 +20,16 @@ int print_c(va_list args)
  */
 int print_s(va_list args)
 {
-    char *str = va_arg(args, char *);
-    int i;
+	char *str = va_arg(args, char *);
+	int i;
 
-    if (!str)
-        str = "(null)";
+	if (!str)
+		str = "(null)";
 
-    for (i = 0; str[i]; i++)
-        write(1, &str[i], 1);
+	for (i = 0; str[i]; i++)
+		write(1, &str[i], 1);
 
-    return (i);
+	return (i);
 }
 
 /**
@@ -40,6 +40,6 @@ int print_s(va_list args)
  */
 int print_percent(va_list args)
 {
-    (void)args;
-    return (write(1, "%", 1));
+	(void)args;
+	return (write(1, "%", 1));
 }
