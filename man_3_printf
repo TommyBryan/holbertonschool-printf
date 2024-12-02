@@ -57,7 +57,9 @@ Integer: [-5678]
 .fi
 
 .SH AUTHOR
-Kevin Burgos and Tommy Bryan \- students at Holberton School Ponce
+.nf
+Kevin Burgos
+Tommy Bryan
 
 .SH SEE ALSO
 .B printf(3)
