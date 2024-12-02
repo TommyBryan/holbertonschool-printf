@@ -17,3 +17,7 @@ C Language: low-level programming language for systems and application-level sof
 - gcc -Wall -Werror _wextra -pedantic -std=gnu89 *.c -o _printf
 3. Run the program:
 - ./_printf
+
+## Authors:
+Kevin Burgos
+Tommy Hernandez
