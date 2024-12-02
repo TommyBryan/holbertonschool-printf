@@ -19,5 +19,5 @@ C Language: low-level programming language for systems and application-level sof
 - ./_printf
 
 ## Authors:
-Kevin Burgos
-Tommy Hernandez
+- Kevin Burgos
+- Tommy Hernandez
