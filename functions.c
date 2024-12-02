@@ -3,19 +3,20 @@
 /**
  * print_c - Prints a single character.
  * @args: List of arguments.
- * 
+ *
  * Return: Number of characters printed (1).
  */
 int print_c(va_list args)
 {
 	char c = va_arg(args, int); /* Get the character */
+
 	return (write(1, &c, 1));
 }
 
 /**
  * print_s - Prints a string.
  * @args: List of arguments.
- * 
+ *
  * Return: Number of characters printed.
  */
 int print_s(va_list args)
@@ -35,7 +36,7 @@ int print_s(va_list args)
 /**
  * print_percent - Prints a literal '%'.
  * @args: Unused argument.
- * 
+ *
  * Return: Number of characters printed (1).
  */
 int print_percent(va_list args)
