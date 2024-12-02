@@ -1,2 +1,2 @@
-#holbertonschool-printf
-#Proyect printf
+# holbertonschool-printf
+# Proyect printf
