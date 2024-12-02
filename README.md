@@ -1,5 +1,5 @@
 # holbertonschool-printf
-# Proyect Description:
+## Proyect Description:
 
 Custom implementaation of the C printf function, designed to replicate formatted output functionality.
 
@@ -11,7 +11,8 @@ Custom implementaation of the C printf function, designed to replicate formatted
 C Language: low-level programming language for systems and application-level software.
 
 ## Installation
-1. clone the repository: https://github.com/TommyBryan/holbertonschool-printf.git
+1. clone the repository:
+- https://github.com/TommyBryan/holbertonschool-printf.git
 2. Compile the source files:
 - gcc -Wall -Werror _wextra -pedantic -std=gnu89 *.c -o _printf
 3. Run the program:
