@@ -10,7 +10,7 @@ int _printf(const char *format, ...)
 {
   va_list args;
   int i = 0, printed_chars = 0;
-  int (*func)(va_list);
+  func_ptr func;
 
   if (!format)
     return (-1);
@@ -29,18 +29,13 @@ int _printf(const char *format, ...)
       else
       {
         func = get_func(format[i]);
-        if (func)
-          printed_chars += func(args);
-        else
-          printed_chars += write(1, &format[i], 1);
+		func(args);
       }
     }
     else
       printed_chars += write(1, &format[i], 1);
-
     i++;
   }
-
   va_end(args);
   return (printed_chars);
 }

@@ -8,21 +8,20 @@
 /* Function prototypes */
 int _printf(const char *format, ...);
 int _putchar(char c);
-int print_c(va_list args);
-int print_s(va_list args);
-int print_percent(va_list args);
+int print_c(char c);
+int print_s(char *s);
+int print_percent(void);
+typedef int (*func_ptr)();
+func_ptr get_func(char x);
 
 /**
  * struct ___ - structure of print function types
  * @_: 
  * @f: print function to be used
  */
-
-/* Structure for specifiers-function mapping */
-
-typedef struct ___
+typedef struct specifier
 {
-  char *___;
+  char *spec;
   int (*f)();
 } typeofprint;
 
