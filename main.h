@@ -4,6 +4,13 @@
 #include <stdarg.h>
 #include <unistd.h>
 
+/* Structure for specifier-function mapping */
+typedef struct spec
+{
+  char valid;
+  int (*f)(va_list);
+} spec;
+
 /* Function prototypes */
 int _printf(const char *format, ...);
 int print_c(va_list args);
