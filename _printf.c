@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _printf - Produces output according to a format.
  * @format: Format string containing the characters and specifiers.
@@ -28,7 +29,10 @@ int _printf(const char *format, ...)
 			if (func)
 				count += func(args);
 			else
-				count += write(1, "?", 1); /* Handling invalid specifiers */
+			{
+				count += write(1, "%", 1);
+				count += write(1, &format[i], 1);
+			}
 		}
 		else
 		{
