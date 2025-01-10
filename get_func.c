@@ -19,6 +19,10 @@ int (*get_func(char x))(va_list)
 		{'x', print_x},
 		{'X', print_X},
 		{'p', print_p},
+		{'b', print_b},
+		{'S', print_S},
+		{'r', print_r},
+		{'R', print_R},
 		{'\0', NULL}
 	};
 	int i = 0;

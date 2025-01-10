@@ -27,6 +27,10 @@ int print_o(va_list args);
 int print_x(va_list args);
 int print_X(va_list args);
 int print_p(va_list args);
+int print_b(va_list args);
+int print_S(va_list args);
+int print_r(va_list args);
+int print_R(va_list args);
 int (*get_func(char x))(va_list);
 char *int_to_string(int num);
 
