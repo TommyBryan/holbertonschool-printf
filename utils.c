@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdlib.h>
+#include <limits.h>
 /**
  * int_to_string - Converts an integer to a string.
  * @num: The integer to convert.

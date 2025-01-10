@@ -44,7 +44,6 @@ int print_s(va_list args)
 int print_percent(va_list args)
 {
 	(void)args; /* Unused argument */
-
 	return (write(1, "%", 1));
 }
 
@@ -61,7 +60,6 @@ int print_d(va_list args)
 	int len;
 
 	len = convert_to_string(num, buffer); /* Helper function to convert integer */
-
 	return (write(1, buffer, len));
 }
 
@@ -75,4 +73,3 @@ int print_i(va_list args)
 {
 	return (print_d(args)); /* 'i' is the same as 'd' in functionality */
 }
-
