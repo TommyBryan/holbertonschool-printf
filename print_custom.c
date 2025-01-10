@@ -28,6 +28,7 @@ int print_b(va_list args)
 	for (len = 0; len < i / 2; len++)
 	{
 		char temp = buffer[len];
+
 		buffer[len] = buffer[i - len - 1];
 		buffer[i - len - 1] = temp;
 	}
