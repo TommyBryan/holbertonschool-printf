@@ -1,0 +1,66 @@
+.\" Manpage for our _printf project.
+.\"
+.TH _PRINTF 3 "December 2024" "1.0" "_printf man page"
+.SH NAME
+_printf \- This function produces output according to a format.
+
+.SH SYNOPSIS
+.B #include "main.h"
+.BI "int _printf(const char *format, ...);"
+
+.SH DESCRIPTION
+.B _printf
+is a simplified version of the standard C library function printf. It writes output to the standard output stream (stdout) based on the format string provided.
+
+The format string is composed of zero or more directives. Directives start with the '%' character and are followed by a format specifier.
+
+Supported format specifiers:
+.TP
+.B %c
+Prints a single character.
+.TP
+.B %s
+Prints a null-terminated string.
+.TP
+.B %%
+Prints a literal '%' character.
+.TP
+.B %d or %i
+Prints a signed decimal integer.
+
+.SH RETURN VALUE
+The function returns the total number of characters printed, excluding the null byte used to end output strings.
+
+.SH EXAMPLES
+.nf
+#include "main.h"
+#include <stdio.h>
+
+int main(void)
+{
+    _printf("Character: [%c]\n", 'H');
+    _printf("String: [%s]\n", "Hello, world!");
+    _printf("Percent: [%%]\n");
+    _printf("Decimal: [%d]\n", 1234);
+    _printf("Integer: [%i]\n", -5678);
+    return (0);
+}
+.fi
+
+Output:
+.nf
+Character: [H]
+String: [Hello, world!]
+Percent: [%]
+Decimal: [1234]
+Integer: [-5678]
+.fi
+
+.SH AUTHOR
+.nf
+Kevin Burgos
+Tommy Bryan
+
+.SH SEE ALSO
+.B printf(3)
+

@@ -8,9 +8,18 @@
  */
 int main(void)
 {
+<<<<<<< HEAD
     _printf("Character: %c\n", 'H');
     _printf("String: %s\n", "Hello, world!");
     _printf("Percent: %%\n");
+=======
+    _printf("Character: [%c]\n", 'H');
+    _printf("String: [%s]\n", "Hello, world!");
+    _printf("Percent: [%%]\n");
+    _printf("Integer: [%d]\n", 12345);
+    _printf("Negative integer: [%d]\n", -6789);
+
+>>>>>>> kevin
     return (0);
 }
 
