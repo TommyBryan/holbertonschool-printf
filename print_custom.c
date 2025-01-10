@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <unistd.h>
-#include <stdarg.h>
+#include <stdio.h> // Include stdio.h for sprintf
 
 /**
  * print_b - Handles the 'b' specifier for _printf.
@@ -45,16 +45,17 @@ int print_S(va_list args)
 {
 	char *str = va_arg(args, char *);
 	int len = 0;
+	int i; // Declare loop variable at the beginning
+	char hex[3]; // Declare variable at the beginning
 
 	if (!str)
 		str = "(null)";
 
-	for (int i = 0; str[i]; i++)
+	for (i = 0; str[i]; i++)
 	{
 		if ((str[i] > 0 && str[i] < 32) || str[i] >= 127)
 		{
 			len += write(1, "\\x", 2);
-			char hex[3];
 			sprintf(hex, "%02X", str[i]);
 			len += write(1, hex, 2);
 		}
@@ -76,14 +77,15 @@ int print_r(va_list args)
 {
 	char *str = va_arg(args, char *);
 	int len = 0;
+	int i; // Declare loop variables at the beginning
 
 	if (!str)
 		str = "(null)";
 
-	for (int i = 0; str[i]; i++)
+	for (i = 0; str[i]; i++)
 		len++;
 
-	for (int i = len - 1; i >= 0; i--)
+	for (i = len - 1; i >= 0; i--)
 		write(1, &str[i], 1);
 
 	return (len);
@@ -99,11 +101,12 @@ int print_R(va_list args)
 {
 	char *str = va_arg(args, char *);
 	int len = 0;
+	int i; // Declare loop variable at the beginning
 
 	if (!str)
 		str = "(null)";
 
-	for (int i = 0; str[i]; i++)
+	for (i = 0; str[i]; i++)
 	{
 		if ((str[i] >= 'a' && str[i] <= 'z'))
 			write(1, &"NOPQRSTUVWXYZABCDEFGHIJKLM"[str[i] - 'a'], 1);
