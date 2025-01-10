@@ -45,8 +45,8 @@ int print_S(va_list args)
 {
 	char *str = va_arg(args, char *);
 	int len = 0;
-	int i; // Declare loop variable at the beginning
-	char hex[3]; // Declare variable at the beginning
+	int i;
+	char hex[3];
 
 	if (!str)
 		str = "(null)";
@@ -77,7 +77,7 @@ int print_r(va_list args)
 {
 	char *str = va_arg(args, char *);
 	int len = 0;
-	int i; // Declare loop variables at the beginning
+	int i;
 
 	if (!str)
 		str = "(null)";
@@ -101,7 +101,7 @@ int print_R(va_list args)
 {
 	char *str = va_arg(args, char *);
 	int len = 0;
-	int i; // Declare loop variable at the beginning
+	int i;
 
 	if (!str)
 		str = "(null)";
