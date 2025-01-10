@@ -3,29 +3,81 @@
 #include <stdlib.h>
 
 /**
- * convert_to_string - Converts an integer to a string.
- * @num: The integer to convert.
- * @buffer: The buffer to store the string.
+ * print_u - Handles the 'u' specifier for _printf.
+ * @args: Argument list.
  *
- * Return: The length of the string.
+ * Return: Number of characters printed.
  */
-int convert_to_string(int num, char *buffer)
+int print_u(va_list args)
 {
-	return sprintf(buffer, "%d", num);
+	unsigned int num = va_arg(args, unsigned int);
+	char buffer[12];
+	int len;
+
+	len = sprintf(buffer, "%u", num);
+	return (write(1, buffer, len));
 }
 
 /**
- * int_to_string - Converts an integer to a string.
- * @num: The integer to convert.
+ * print_o - Handles the 'o' specifier for _printf.
+ * @args: Argument list.
  *
- * Return: Pointer to the string.
+ * Return: Number of characters printed.
  */
-char *int_to_string(int num)
+int print_o(va_list args)
 {
-	char *str = malloc(12); /* Allocate enough space for an integer string */
-	if (str)
-	{
-		sprintf(str, "%d", num);
-	}
-	return str;
+	unsigned int num = va_arg(args, unsigned int);
+	char buffer[12];
+	int len;
+
+	len = sprintf(buffer, "%o", num);
+	return (write(1, buffer, len));
+}
+
+/**
+ * print_x - Handles the 'x' specifier for _printf.
+ * @args: Argument list.
+ *
+ * Return: Number of characters printed.
+ */
+int print_x(va_list args)
+{
+	unsigned int num = va_arg(args, unsigned int);
+	char buffer[12];
+	int len;
+
+	len = sprintf(buffer, "%x", num);
+	return (write(1, buffer, len));
+}
+
+/**
+ * print_X - Handles the 'X' specifier for _printf.
+ * @args: Argument list.
+ *
+ * Return: Number of characters printed.
+ */
+int print_X(va_list args)
+{
+	unsigned int num = va_arg(args, unsigned int);
+	char buffer[12];
+	int len;
+
+	len = sprintf(buffer, "%X", num);
+	return (write(1, buffer, len));
+}
+
+/**
+ * print_p - Handles the 'p' specifier for _printf.
+ * @args: Argument list.
+ *
+ * Return: Number of characters printed.
+ */
+int print_p(va_list args)
+{
+	void *addr = va_arg(args, void *);
+	char buffer[20];
+	int len;
+
+	len = sprintf(buffer, "%p", addr);
+	return (write(1, buffer, len));
 }

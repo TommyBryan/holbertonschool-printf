@@ -1,6 +1,8 @@
 #include "main.h"
 #include <unistd.h>
 #include <stdarg.h>
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * print_c - Handles the 'c' specifier for _printf.
@@ -59,7 +61,7 @@ int print_d(va_list args)
 	char buffer[12];
 	int len;
 
-	len = convert_to_string(num, buffer); /* Helper function to convert integer */
+	len = sprintf(buffer, "%d", num);
 	return (write(1, buffer, len));
 }
 
